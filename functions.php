@@ -614,7 +614,7 @@ HTML;
         'Content-Type: text/html; charset=UTF-8',
         'Reply-To: ' . $name . ' <' . $email . '>',
         'Cc: info@ucicarbons.com',
-        // Bcc to personal Gmail removed 09-Sep-2026 15:04 IST - AK
+        'Bcc: amit.imysecy@gmail.com', // restored 09-Sep-2026 - AK's own address
     ];
     wp_mail( $to, $subject, $html_email, $headers );
 
