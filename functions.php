@@ -221,6 +221,110 @@ function uci_enquiry_metabox( $post ) {
 
 
 /* ══════════════════════════════════════════════
+   ENQUIRIES — GOOGLE SHEET AUTO-SYNC
+   Sends every new enquiry to a Google Apps Script
+   Web App URL (configured under Enquiries → Google
+   Sheet Sync), which appends a row to a Sheet.
+   ══════════════════════════════════════════════ */
+function uci_gsheet_sync_row( $post_id ) {
+    if ( get_option( 'uci_gsheet_sync_enabled', '0' ) !== '1' ) return;
+
+    $url = get_option( 'uci_gsheet_webhook_url', '' );
+    if ( ! $url ) return;
+
+    $row = [
+        'date'          => get_the_date( 'Y-m-d H:i:s', $post_id ),
+        'type'          => get_post_meta( $post_id, '_enq_type', true ),
+        'name'          => get_post_meta( $post_id, '_enq_name', true ),
+        'email'         => get_post_meta( $post_id, '_enq_email', true ),
+        'company'       => get_post_meta( $post_id, '_enq_company', true ),
+        'country'       => get_post_meta( $post_id, '_enq_country', true ),
+        'grade'         => get_post_meta( $post_id, '_enq_grade', true ),
+        'application'   => get_post_meta( $post_id, '_enq_application', true ),
+        'brochure_type' => get_post_meta( $post_id, '_enq_brochure_type', true ),
+        'message'       => get_post_meta( $post_id, '_enq_message', true ),
+    ];
+
+    wp_remote_post( $url, [
+        'timeout'  => 5,
+        'blocking' => false,
+        'headers'  => [ 'Content-Type' => 'application/json' ],
+        'body'     => wp_json_encode( $row ),
+    ] );
+}
+
+/* Settings screen: enable/disable + Google Sheet webhook URL */
+add_action('admin_menu', function () {
+    add_submenu_page(
+        'edit.php?post_type=uci_enquiry',
+        'Google Sheet Sync',
+        'Google Sheet Sync',
+        'manage_options',
+        'uci-gsheet-sync',
+        'uci_gsheet_sync_settings_page'
+    );
+});
+
+function uci_gsheet_sync_settings_page() {
+    if ( isset( $_POST['uci_gsheet_save'] ) && check_admin_referer( 'uci_gsheet_save' ) ) {
+        update_option( 'uci_gsheet_sync_enabled', isset( $_POST['uci_gsheet_sync_enabled'] ) ? '1' : '0' );
+        update_option( 'uci_gsheet_webhook_url', esc_url_raw( wp_unslash( $_POST['uci_gsheet_webhook_url'] ?? '' ) ) );
+        echo '<div class="notice notice-success is-dismissible"><p>Settings saved.</p></div>';
+    }
+    $enabled = get_option( 'uci_gsheet_sync_enabled', '0' );
+    $url     = get_option( 'uci_gsheet_webhook_url', '' );
+    ?>
+    <div class="wrap">
+        <h1>Google Sheet Sync</h1>
+        <p>Automatically send every new enquiry (Contact, Request TDS, Request Brochure, Brochure Download) — with its submission date/time — to a Google Sheet.</p>
+        <form method="post">
+            <?php wp_nonce_field( 'uci_gsheet_save' ); ?>
+            <input type="hidden" name="uci_gsheet_save" value="1">
+            <table class="form-table">
+                <tr>
+                    <th scope="row">Enable Sync</th>
+                    <td>
+                        <label>
+                            <input type="checkbox" name="uci_gsheet_sync_enabled" value="1" <?php checked( '1', $enabled ); ?> />
+                            Send new enquiries to the Google Sheet automatically
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">Google Sheet Link</th>
+                    <td>
+                        <input type="url" name="uci_gsheet_webhook_url" value="<?php echo esc_attr( $url ); ?>"
+                               class="regular-text" placeholder="https://script.google.com/macros/s/…/exec" />
+                        <p class="description">
+                            Paste the <strong>Web App URL</strong> from a Google Apps Script bound to your target Sheet
+                            (in the Sheet: Extensions → Apps Script → paste the snippet below → Deploy → New deployment → Web app → Anyone can access → copy the URL here).
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">Apps Script Snippet</th>
+                    <td>
+                        <p class="description">Paste this into the Sheet's Apps Script editor so it knows how to receive each enquiry:</p>
+                        <textarea readonly rows="10" class="large-text code" onclick="this.select()">function doPost(e) {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  var row = JSON.parse(e.postData.contents);
+  sheet.appendRow([
+    row.date, row.type, row.name, row.email, row.company,
+    row.country, row.grade, row.application, row.brochure_type, row.message
+  ]);
+  return ContentService.createTextOutput('OK');
+}</textarea>
+                    </td>
+                </tr>
+            </table>
+            <?php submit_button( 'Save Settings' ); ?>
+        </form>
+    </div>
+    <?php
+}
+
+
+/* ══════════════════════════════════════════════
    ENQUIRIES — READ-ONLY + EXPORT (CSV / Print / Email)
    ══════════════════════════════════════════════ */
 
@@ -495,6 +599,7 @@ function uci_contact_form_handler() {
         update_post_meta($post_id, '_enq_brochure_type',$brtype);
         update_post_meta($post_id, '_enq_message',      $message);
         update_post_meta($post_id, '_enq_ip',           $ip);
+        uci_gsheet_sync_row( $post_id );
     }
 
     /* ── 2. Build details rows for email ── */

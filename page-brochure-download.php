@@ -36,6 +36,7 @@ if ( $_SERVER['REQUEST_METHOD'] === 'POST' && isset( $_POST['brochure_nonce'] ) 
                 update_post_meta( $post_id, '_enq_email',   $email );
                 update_post_meta( $post_id, '_enq_company', $co );
                 update_post_meta( $post_id, '_enq_ip',      $_SERVER['REMOTE_ADDR'] ?? '' );
+                uci_gsheet_sync_row( $post_id );
             }
 
             $site    = get_bloginfo('name');
