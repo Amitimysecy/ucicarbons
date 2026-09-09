@@ -226,7 +226,7 @@ function uci_enquiry_metabox( $post ) {
    Web App URL (configured under Enquiries → Google
    Sheet Sync), which appends a row to a Sheet.
    ══════════════════════════════════════════════ */
-function uci_gsheet_sync_row( $post_id ) {
+function uci_gsheet_sync_row( $post_id, $blocking = false ) {
     if ( get_option( 'uci_gsheet_sync_enabled', '0' ) !== '1' ) return;
 
     $url = get_option( 'uci_gsheet_webhook_url', '' );
@@ -245,9 +245,12 @@ function uci_gsheet_sync_row( $post_id ) {
         'message'       => get_post_meta( $post_id, '_enq_message', true ),
     ];
 
-    wp_remote_post( $url, [
-        'timeout'  => 5,
-        'blocking' => false,
+    // $blocking=true (used by bin/test-enquiry-mail-sync.php) waits for and
+    // returns the Apps Script response so the sync can be diagnosed; normal
+    // form submissions fire-and-forget so the visitor's request isn't delayed.
+    return wp_remote_post( $url, [
+        'timeout'  => $blocking ? 15 : 5,
+        'blocking' => $blocking,
         'headers'  => [ 'Content-Type' => 'application/json' ],
         'body'     => wp_json_encode( $row ),
     ] );
