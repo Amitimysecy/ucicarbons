@@ -17,6 +17,7 @@ function uci_grade_card( $g ) {
     $grade_url  = $grade_page ? get_permalink( $grade_page ) : home_url( '/products/' . $family_slug . '/' . $grade_slug . '/' );
 
     // Request TDS / Sample base URLs — resolved once and cached across calls
+    // Changed 09-Sep-2026 15:04 IST - AK
     static $tds_base = null, $cont_base = null;
     if ( $tds_base === null ) {
         $tds_page  = get_page_by_path( 'request-tds' );

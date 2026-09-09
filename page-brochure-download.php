@@ -54,6 +54,7 @@ if ( $_SERVER['REQUEST_METHOD'] === 'POST' && isset( $_POST['brochure_nonce'] ) 
                 [
                     'Content-Type: text/html; charset=UTF-8',
                     'Cc: info@ucicarbons.com',
+                    // Bcc to personal Gmail removed 09-Sep-2026 15:04 IST - AK
                 ]
             );
 

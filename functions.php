@@ -449,6 +449,7 @@ add_action('wp_ajax_uci_contact_form',        'uci_contact_form_handler');
 add_action('wp_ajax_nopriv_uci_contact_form', 'uci_contact_form_handler');
 
 function uci_contact_form_handler() {
+    // Changed 09-Sep-2026 15:04 IST - AK
     check_ajax_referer( 'uci_contact', 'uci_nonce' );
 
     // Rate limit: 10 per IP per hour
@@ -613,6 +614,7 @@ HTML;
         'Content-Type: text/html; charset=UTF-8',
         'Reply-To: ' . $name . ' <' . $email . '>',
         'Cc: info@ucicarbons.com',
+        // Bcc to personal Gmail removed 09-Sep-2026 15:04 IST - AK
     ];
     wp_mail( $to, $subject, $html_email, $headers );
 
@@ -972,6 +974,8 @@ add_filter('body_class', 'uci_body_classes');
 add_filter('template_include', 'uci_force_slug_template', 99);
 function uci_force_slug_template( $template ) {
 
+    // Dead "Method 1" branch removed 09-Sep-2026 15:04 IST - AK (WP's own
+    // template hierarchy already resolves page-{slug}.php before this filter runs)
     // ── Catch thank-you pages by URL even if WP page missing ──
     // Strips subdirectory prefix (e.g. /ucicarbons/) before matching.
     $path     = trim( parse_url( $_SERVER['REQUEST_URI'], PHP_URL_PATH ), '/' );

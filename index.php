@@ -8,6 +8,7 @@
  * if the WP admin hasn't explicitly assigned the page template.
  */
 
+// Changed 09-Sep-2026 15:04 IST - AK
 if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
