@@ -1,0 +1,216 @@
+[07-Jul-2026 19:38:26 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_page() in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php on line 11
+[11-Jul-2026 07:33:43 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_page() in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php on line 11
+[12-Jul-2026 07:38:55 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_page() in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php on line 11
+[17-Jul-2026 07:38:44 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_page() in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php on line 11
+[21-Jul-2026 19:33:21 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_page() in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php on line 11
+[22-Jul-2026 07:38:30 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_page() in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php on line 11
+[22-Jul-2026 19:33:22 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_page() in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php on line 11
+[23-Jul-2026 07:35:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_page() in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php on line 11
+[23-Jul-2026 19:33:21 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_page() in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php on line 11
+[24-Jul-2026 07:35:20 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_page() in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php on line 11
+[24-Jul-2026 19:33:26 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_page() in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php on line 11
+[25-Jul-2026 07:34:26 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_page() in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php on line 11
+[25-Jul-2026 19:33:25 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_page() in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php on line 11
+[26-Jul-2026 07:34:09 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_page() in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php on line 11
+[26-Jul-2026 19:33:21 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_page() in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php on line 11
+[19-Aug-2026 19:33:22 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_page() in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php on line 11
+[20-Aug-2026 07:34:36 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_page() in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php on line 11
+[20-Aug-2026 19:33:23 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_page() in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php on line 11
+[21-Aug-2026 07:34:57 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_page() in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php on line 11
+[21-Aug-2026 19:33:23 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_page() in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php on line 11
+[22-Aug-2026 07:34:31 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_page() in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php on line 11
+[22-Aug-2026 19:33:24 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_page() in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php on line 11
+[23-Aug-2026 07:34:42 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_page() in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php on line 11
+[23-Aug-2026 19:33:22 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_page() in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php on line 11
+[24-Aug-2026 07:34:33 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_page() in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php on line 11
+[24-Aug-2026 19:33:26 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_page() in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php on line 11
+[25-Aug-2026 07:34:42 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_page() in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php on line 11
+[25-Aug-2026 19:33:23 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_page() in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php on line 11
+[26-Aug-2026 07:35:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_page() in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php on line 11
+[26-Aug-2026 19:33:22 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_page() in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php on line 11
+[27-Aug-2026 07:34:32 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_page() in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php on line 11
+[27-Aug-2026 19:33:26 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_page() in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php on line 11
+[28-Aug-2026 07:34:37 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_page() in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php on line 11
+[28-Aug-2026 19:33:50 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_page() in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php on line 11
+[29-Aug-2026 07:34:28 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_page() in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php on line 11
+[29-Aug-2026 19:33:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_page() in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php on line 11
+[30-Aug-2026 07:34:42 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_page() in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php on line 11
+[30-Aug-2026 19:33:25 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_page() in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php on line 11
+[31-Aug-2026 07:35:06 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_page() in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php on line 11
+[31-Aug-2026 19:33:31 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_page() in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php on line 11
+[01-Sep-2026 07:34:48 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_page() in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php on line 11
+[01-Sep-2026 19:33:23 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_page() in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php on line 11
+[02-Sep-2026 07:34:20 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_page() in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php on line 11
+[02-Sep-2026 19:33:23 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_page() in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php on line 11
+[03-Sep-2026 07:34:59 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_page() in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php on line 11
+[03-Sep-2026 19:33:24 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_page() in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php on line 11
+[04-Sep-2026 07:35:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_page() in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php on line 11
+[04-Sep-2026 19:33:25 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_page() in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php on line 11
+[05-Sep-2026 07:34:16 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_page() in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php on line 11
+[05-Sep-2026 19:33:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_page() in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php on line 11
+[06-Sep-2026 07:34:31 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_page() in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php on line 11
+[06-Sep-2026 19:33:22 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_page() in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php on line 11
+[07-Sep-2026 07:34:46 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_page() in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php on line 11
+[07-Sep-2026 19:33:23 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function is_page() in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ajuxm3jglqa2/public_html/wp-content/themes/uci-carbons-theme-2/index.php on line 11
