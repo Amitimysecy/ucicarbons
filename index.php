@@ -8,6 +8,10 @@
  * if the WP admin hasn't explicitly assigned the page template.
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
+
 if ( is_page() ) {
     $slug     = get_post_field( 'post_name', get_queried_object_id() );
     $slug_tpl = get_template_directory() . '/page-' . $slug . '.php';

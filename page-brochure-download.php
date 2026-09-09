@@ -54,7 +54,6 @@ if ( $_SERVER['REQUEST_METHOD'] === 'POST' && isset( $_POST['brochure_nonce'] ) 
                 [
                     'Content-Type: text/html; charset=UTF-8',
                     'Cc: info@ucicarbons.com',
-                    'Bcc: amit.imysecy@gmail.com',
                 ]
             );
 

@@ -449,6 +449,8 @@ add_action('wp_ajax_uci_contact_form',        'uci_contact_form_handler');
 add_action('wp_ajax_nopriv_uci_contact_form', 'uci_contact_form_handler');
 
 function uci_contact_form_handler() {
+    check_ajax_referer( 'uci_contact', 'uci_nonce' );
+
     // Rate limit: 10 per IP per hour
     $ip    = sanitize_text_field( $_SERVER['REMOTE_ADDR'] ?? 'unknown' );
     $t_key = 'uci_contact_rate_' . md5($ip);
@@ -611,7 +613,6 @@ HTML;
         'Content-Type: text/html; charset=UTF-8',
         'Reply-To: ' . $name . ' <' . $email . '>',
         'Cc: info@ucicarbons.com',
-        'Bcc: amit.imysecy@gmail.com',
     ];
     wp_mail( $to, $subject, $html_email, $headers );
 
@@ -971,16 +972,7 @@ add_filter('body_class', 'uci_body_classes');
 add_filter('template_include', 'uci_force_slug_template', 99);
 function uci_force_slug_template( $template ) {
 
-    // ── Method 1: page exists in WP database ─────────────────────────
-    if ( is_page() ) {
-        $slug     = get_post_field('post_name', get_queried_object_id());
-        $slug_tpl = get_template_directory() . '/page-' . $slug . '.php';
-        if ( file_exists($slug_tpl) && realpath($slug_tpl) !== realpath($template) ) {
-            return $slug_tpl;
-        }
-    }
-
-    // ── Method 2: catch thank-you pages by URL even if WP page missing ──
+    // ── Catch thank-you pages by URL even if WP page missing ──
     // Strips subdirectory prefix (e.g. /ucicarbons/) before matching.
     $path     = trim( parse_url( $_SERVER['REQUEST_URI'], PHP_URL_PATH ), '/' );
     $site_sub = trim( parse_url( site_url(), PHP_URL_PATH ), '/' );

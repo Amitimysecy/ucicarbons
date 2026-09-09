@@ -16,14 +16,21 @@ function uci_grade_card( $g ) {
     $grade_page = get_page_by_path( 'products/' . $family_slug . '/' . $grade_slug );
     $grade_url  = $grade_page ? get_permalink( $grade_page ) : home_url( '/products/' . $family_slug . '/' . $grade_slug . '/' );
 
+    // Request TDS / Sample base URLs — resolved once and cached across calls
+    static $tds_base = null, $cont_base = null;
+    if ( $tds_base === null ) {
+        $tds_page  = get_page_by_path( 'request-tds' );
+        $tds_base  = $tds_page ? get_permalink( $tds_page ) : home_url( '/request-tds/' );
+    }
+    if ( $cont_base === null ) {
+        $cont_page = get_page_by_path( 'contact' );
+        $cont_base = $cont_page ? get_permalink( $cont_page ) : home_url( '/contact/' );
+    }
+
     // Request TDS URL → /request-tds/?grade=CODE
-    $tds_page  = get_page_by_path( 'request-tds' );
-    $tds_base  = $tds_page ? get_permalink( $tds_page ) : home_url( '/request-tds/' );
     $tds_link  = esc_url( add_query_arg( 'grade', $code, $tds_base ) );
 
     // Sample URL → /contact/?grade=CODE
-    $cont_page   = get_page_by_path( 'contact' );
-    $cont_base   = $cont_page ? get_permalink( $cont_page ) : home_url( '/contact/' );
     $sample_link = esc_url( add_query_arg( 'grade', $code, $cont_base ) );
     ?>
     <?php $card_links = get_option('uci_product_card_links', '0'); ?>
