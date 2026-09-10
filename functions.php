@@ -307,16 +307,34 @@ function uci_gsheet_sync_settings_page() {
                 <tr>
                     <th scope="row">Apps Script Snippet</th>
                     <td>
-                        <p class="description">Paste this into the Sheet's Apps Script editor so it knows how to receive each enquiry:</p>
-                        <textarea readonly rows="10" class="large-text code" onclick="this.select()">function doPost(e) {
+                        <p class="description">Paste this into the Sheet's Apps Script editor so it knows how to receive each enquiry. It also adds a bold, frozen header row automatically (safe to paste even if the Sheet already has rows — the header is inserted above them):</p>
+                        <textarea readonly rows="22" class="large-text code" onclick="this.select()">function doPost(e) {
   var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  ensureHeader(sheet);
+
   var row = JSON.parse(e.postData.contents);
   sheet.appendRow([
     row.date, row.type, row.name, row.email, row.company,
     row.country, row.grade, row.application, row.brochure_type, row.message
   ]);
   return ContentService.createTextOutput('OK');
+}
+
+function ensureHeader(sheet) {
+  var headers = ['Date', 'Type', 'Name', 'Email', 'Company', 'Country', 'Grade', 'Application', 'Brochure Type', 'Message'];
+  if (sheet.getRange(1, 1).getValue() === 'Date') return; // header already present
+
+  sheet.insertRowBefore(1);
+  sheet.getRange(1, 1, 1, headers.length)
+    .setValues([headers])
+    .setFontWeight('bold')
+    .setBackground('#0F3549')
+    .setFontColor('#ffffff')
+    .setHorizontalAlignment('center');
+  sheet.setFrozenRows(1);
+  sheet.autoResizeColumns(1, headers.length);
 }</textarea>
+                        <p class="description">After pasting, click <strong>Deploy → Manage deployments → ✎ Edit → Version: New version → Deploy</strong> so the live Web App URL picks up this update (editing the script alone doesn't redeploy it). The header appears the next time a form is submitted, or run the WP-CLI test script (<code>bin/test-enquiry-mail-sync.php</code>).</p>
                     </td>
                 </tr>
             </table>
