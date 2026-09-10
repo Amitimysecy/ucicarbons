@@ -232,17 +232,24 @@ function uci_gsheet_sync_row( $post_id, $blocking = false ) {
     $url = get_option( 'uci_gsheet_webhook_url', '' );
     if ( ! $url ) return;
 
+    // Same 8-column shape as the "Export CSV" button (uci_export_enquiries_csv):
+    // Date, Type (human label), Name, Email, Company, Country, Grade / Application
+    // (merged), Message — so the Sheet lines up with what Export CSV already produces.
+    $type_map  = [ 'contact' => 'Contact Us', 'tds' => 'Request TDS', 'brochure' => 'Request Brochure', 'brochure_dl' => 'Brochure Download' ];
+    $type_raw  = get_post_meta( $post_id, '_enq_type', true );
+    $grade_app = get_post_meta( $post_id, '_enq_grade', true )
+        ?: get_post_meta( $post_id, '_enq_application', true )
+        ?: get_post_meta( $post_id, '_enq_brochure_type', true );
+
     $row = [
-        'date'          => get_the_date( 'Y-m-d H:i:s', $post_id ),
-        'type'          => get_post_meta( $post_id, '_enq_type', true ),
-        'name'          => get_post_meta( $post_id, '_enq_name', true ),
-        'email'         => get_post_meta( $post_id, '_enq_email', true ),
-        'company'       => get_post_meta( $post_id, '_enq_company', true ),
-        'country'       => get_post_meta( $post_id, '_enq_country', true ),
-        'grade'         => get_post_meta( $post_id, '_enq_grade', true ),
-        'application'   => get_post_meta( $post_id, '_enq_application', true ),
-        'brochure_type' => get_post_meta( $post_id, '_enq_brochure_type', true ),
-        'message'       => get_post_meta( $post_id, '_enq_message', true ),
+        'date'            => get_the_date( 'Y-m-d H:i', $post_id ),
+        'type'            => $type_map[ $type_raw ] ?? strtoupper( $type_raw ),
+        'name'            => get_post_meta( $post_id, '_enq_name', true ),
+        'email'           => get_post_meta( $post_id, '_enq_email', true ),
+        'company'         => get_post_meta( $post_id, '_enq_company', true ),
+        'country'         => get_post_meta( $post_id, '_enq_country', true ),
+        'grade_application' => $grade_app,
+        'message'         => get_post_meta( $post_id, '_enq_message', true ),
     ];
 
     // $blocking=true (used by bin/test-enquiry-mail-sync.php) waits for and
@@ -315,13 +322,13 @@ function uci_gsheet_sync_settings_page() {
   var row = JSON.parse(e.postData.contents);
   sheet.appendRow([
     row.date, row.type, row.name, row.email, row.company,
-    row.country, row.grade, row.application, row.brochure_type, row.message
+    row.country, row.grade_application, row.message
   ]);
   return ContentService.createTextOutput('OK');
 }
 
 function ensureHeader(sheet) {
-  var headers = ['Date', 'Type', 'Name', 'Email', 'Company', 'Country', 'Grade', 'Application', 'Brochure Type', 'Message'];
+  var headers = ['Date', 'Type', 'Name', 'Email', 'Company', 'Country', 'Grade / Application', 'Message'];
   if (sheet.getRange(1, 1).getValue() === 'Date') return; // header already present
 
   sheet.insertRowBefore(1);
